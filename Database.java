@@ -114,7 +114,7 @@ public class Database {
                 String[] user = line.split(" : ");
                 if (Integer.parseInt(user[0]) == id) {
                     userDeleted = true;
-                    BalanceDatabase.deleteBalance(id); // NOWA LINIA - USUWANIE SALDA
+                    BalanceDatabase.deleteBalance(id);
                 } else {
                     writer.write(line);
                     writer.newLine();
