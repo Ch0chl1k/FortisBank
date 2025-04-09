@@ -25,7 +25,7 @@ public class MainAppGUI {
 
     private void initializeGUI() {
         mainFrame = new JFrame("Fortis Bank");
-        mainFrame.setSize(400, 300); // Zwiększony rozmiar okna
+        mainFrame.setSize(400, 300);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setLayout(new BorderLayout());
@@ -73,22 +73,20 @@ public class MainAppGUI {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // Panel z saldem - powiększony
         JPanel balancePanel = new JPanel();
         balancePanel.setBackground(BACKGROUND_COLOR);
         balanceLabel = new JLabel(String.format("$%.2f", balance), SwingConstants.CENTER);
-        balanceLabel.setFont(new Font("Arial", Font.BOLD, 36)); // Zwiększona czcionka
+        balanceLabel.setFont(new Font("Arial", Font.BOLD, 36));
         balanceLabel.setForeground(TEXT_COLOR);
         balancePanel.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(TEXT_COLOR, 2), // Grubsza ramka
-                BorderFactory.createEmptyBorder(15, 40, 15, 40) // Większe paddingi
+                BorderFactory.createLineBorder(TEXT_COLOR, 2),
+                BorderFactory.createEmptyBorder(15, 40, 15, 40)
         ));
         balancePanel.add(balanceLabel);
 
         gbc.gridy = 0;
         centerPanel.add(balancePanel, gbc);
 
-        // Panel z przyciskami - powiększone
         JPanel buttonPanel = new JPanel(new GridLayout(2, 2, 15, 15));
         buttonPanel.setBackground(BACKGROUND_COLOR);
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
@@ -98,8 +96,7 @@ public class MainAppGUI {
         JButton loanButton = new JButton("Take Loan");
         JButton creditButton = new JButton("Take Credit");
 
-        // Ustawienia przycisków - większe rozmiary
-        Dimension buttonSize = new Dimension(140, 50); // Większe przyciski
+        Dimension buttonSize = new Dimension(140, 50);
         depositButton.setPreferredSize(buttonSize);
         withdrawButton.setPreferredSize(buttonSize);
         loanButton.setPreferredSize(buttonSize);
