@@ -65,9 +65,9 @@ public class LoginGUI {
                 }
 
                 else if (Database.checkLogin(email, password) != -1) {
-                    int userId = Database.checkLogin(email, password); // Pobierz ID użytkownika
+                    int userId = Database.checkLogin(email, password);
                     JOptionPane.showMessageDialog(frame, "Logged in successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
-                    new MainAppGUI(userId); // Poprawne wywołanie konstruktora
+                    new MainAppGUI(userId);
                     frame.dispose();
                 }
 
